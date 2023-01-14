@@ -1,5 +1,3 @@
-import { useParams } from "react-router-dom"
-
 const URL = "https://cheese-backend.onrender.com"
 
 export const cheesesLoader = async () => {
@@ -8,8 +6,8 @@ export const cheesesLoader = async () => {
     return cheeses
 }
 
-export const cheeseLoader = async () => {
-    const response = await fetch(URL + "/cheese/" + params.id)
+export const cheeseLoader = async ({params}) => {
+    const response = await fetch(URL + "/cheese/" + params._id)
     const cheese = await response.json()
     return cheese
 }

@@ -14,7 +14,7 @@ function Index (props) {
 
         {cheeses.map(cheese => {
        return <div key={cheese._id} className="cheese">
-            <Link to={`/${cheese._id}`}>
+            <Link to={`/cheese/${cheese._id}`}>
                 <h1>{cheese.name}</h1>
             </Link>
             <img src={cheese.image} alt={cheese.name}/>
