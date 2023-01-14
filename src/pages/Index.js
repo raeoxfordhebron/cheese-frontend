@@ -13,13 +13,16 @@ function Index (props) {
         </Form>
 
         {cheeses.map(cheese => {
-       return <div key={cheese._id} className="cheeses">
+       return <><div key={cheese._id} className="cheeses">
             <Link to={`/cheese/${cheese._id}`}>
                 <h1>{cheese.name}</h1>
             </Link>
+            <div className="container">
             <img src={cheese.image} alt={cheese.name}/>
+            </div>
             <h3>{cheese.countryOfOrigin}</h3>
-        </div>
+            </div>
+            </>
     })
 }
 </div>
